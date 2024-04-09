@@ -7,7 +7,7 @@
 function getRoles() {
     let roles_url = "?controller=Usuario&action=getRoles";
 
-    fetch(base_url + roles_url)
+    fetch(BASE_URL + roles_url)
             .then(response => {
                 roles = response.json();
                 return roles;

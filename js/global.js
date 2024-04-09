@@ -1,5 +1,5 @@
 
-const base_url = "http://localhost:3000/controller/FrontController.php";
+const BASE_URL = "http://localhost:3000/controller/FrontController.php";
 
 window.onload = onceLoaded;
 

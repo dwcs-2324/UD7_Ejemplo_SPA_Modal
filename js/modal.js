@@ -23,7 +23,7 @@ function showModal(modal_id, title, msg,
     let cancel_clicked = false;
 
     //Se crea con un objeto options, para que no se cierre el modal cuando se haga clic fuera del modal, pero sí si se usa la tecla ESC
-    let myModal = new bootstrap.Modal(document.getElementById(modal_id), { backdrop: 'static', keyboard: true});
+    let myModal = new bootstrap.Modal(document.getElementById(modal_id), { backdrop: 'static'});
 
     let modal_id_selector = '#' + modal_id;
 

@@ -17,7 +17,7 @@ function login(event) {
     data.append('pwd', pwd);
     data.append('rol', rol);
 
-    const request = new Request(base_url + login_url, {
+    const request = new Request(BASE_URL + login_url, {
         method: "POST",
         body: data
     });
@@ -57,9 +57,8 @@ function login(event) {
 function confirmLoginJSON(event) {
     //evitamos que se envíe el formulario de forma predefinida (la acción por defecto sería enviar los datos al servidor)
     event.preventDefault();
-    showModal("spa_modal", "Confirmación login", "¿Confirma que quiere iniciar sesión?", null, null, function () {
-        loginJSON();
-    }, null);
+    showModal("spa_modal", "Confirmación login", "¿Confirma que quiere iniciar sesión?", null, null,
+        () => { loginJSON(); }, null);
 
 }
 
@@ -79,7 +78,7 @@ function loginJSON() {
     const data = { 'email': email, 'pwd': pwd, 'rol': rol };
 
 
-    const request = new Request(base_url + login_url, {
+    const request = new Request(BASE_URL + login_url, {
         method: "POST",
         body: JSON.stringify(data)
     });
